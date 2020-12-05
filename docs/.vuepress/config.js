@@ -32,6 +32,9 @@ module.exports = {
   title: "Darcrand's Blog",
 
   themeConfig: {
+    logo:
+      "https://avatars1.githubusercontent.com/u/26473667?s=460&u=a118bff244dafd9a1bf2d8a8465d043d1d083109&v=4",
+
     // 顶部导航
     nav: [{ text: "Github", link: "https://github.com/Darcrandex/my-blog" }],
 
