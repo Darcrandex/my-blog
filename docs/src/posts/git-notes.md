@@ -4,9 +4,9 @@
 
 ### 配置本地 git 账号
 
-```
-git config user.name "Jiang Xin"
-git config user.email "gotgithub@gmail.com"
+```sh
+git config user.name "zhangsan"
+git config user.email "zhangsan@gmail.com"
 ```
 
 ### 本地生成 ssh-key
