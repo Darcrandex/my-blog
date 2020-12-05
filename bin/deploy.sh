@@ -11,5 +11,6 @@ git init
 git add -A
 git commit -m 'deploy'
 
-# 推代码到 github-page 仓库(本地要先配置好ssh权限)
+# 推代码到 github-page 仓库
+# 需要先中本地环境配置好 github-pages 对应项目的ssh权限
 git push -f git@github.com:Darcrandex/darcrandex.github.io.git master

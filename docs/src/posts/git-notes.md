@@ -13,14 +13,14 @@ git config user.email "gotgithub@gmail.com"
 
 1. 直接生成
 
-```
+```sh
 cd
 ssh-keygen
 ```
 
 其中第一步的`cd`是进入默认根目录, 然后一路按`回车`选择默认项即可.
 
-```
+```sh
 cd ./.ssh
 ll
 ```
@@ -36,13 +36,13 @@ ll
 
 例如
 
-```
+```sh
 ssh-keygen -t rsa -b 1024 -f yourkeyname -C "备注"
 ```
 
 进入默认根目录, 然后进入`.ssh`文件夹即可看到生成的两个密钥文件:`id_rsa`(私钥), `id_rsa.pub`(公钥).
 
-```
+```sh
 // 打印公钥内容
 cat id_rsa.pub
 
@@ -54,7 +54,7 @@ clip < id_rsa.pub
 
 最后验证是否生效
 
-```
+```sh
 ssh -T git@github.com
 ```
 
@@ -64,7 +64,7 @@ ssh -T git@github.com
 
 因为在线上仓库使用的`linus`系统的换行符是`lf`,windows 用的是`crlf`.在拉取项目到本地会默认转化换行符.
 
-```
+```sh
 git config --global core.autocrlf false
 ```
 
@@ -72,14 +72,14 @@ git config --global core.autocrlf false
 
 1. 初始化本地仓库
 
-```
+```sh
 cd my-project
 git init
 ```
 
 2. 克隆仓库
 
-```
+```sh
 git clone <仓库地址(线上/本地)>
 
 git clone <地址> <本地仓库新的名字>
@@ -89,7 +89,7 @@ git clone -b <指定要克隆的分支名> <地址>
 
 3. 工作区->暂存区
 
-```
+```sh
 // 暂存个别文件,空格隔开多个文件名
 git add <文件路径>
 
@@ -99,23 +99,24 @@ git add .
 
 4. 暂存区->本地仓库
 
-```
+```sh
 git commit -m "备注"
 ```
 
 5. 拉取线上新内容(尝试合并)
 
-```
+```sh
 git pull <终端名称> <分支名称>
 
 git pull origin master
 
 git pull gitee my-branch
+
 ```
 
 6. 本地仓库->线上仓库
 
-```
+```sh
 git push <终端名称> <分支名称>
 
 git push origin master
@@ -123,13 +124,13 @@ git push origin master
 
 7. 查看关联的终端
 
-```
+```sh
 git remote -v
 ```
 
 8. 查看修改历史
 
-```
+```sh
 git log
 ```
 
@@ -137,7 +138,7 @@ git log
 
 > [git cherry-pick 教程](http://www.ruanyifeng.com/blog/2020/04/git-cherry-pick.html)
 
-```
+```sh
 git checkout A
 git commit -m 'a1 的内容'
 git push origin A
@@ -146,9 +147,19 @@ git log
 
 查看'a1 的内容'所对应的 id
 
-```
+```sh
 git checkout B
 git cherry-pick <id>
+```
+
+10. 克隆项目
+
+```sh
+git clone <项目地址>
+
+git clone -b <指定要克隆的分支> <项目地址>
+
+git clone <项目地址> <重新命名文件夹>
 ```
 
 ![git 指令](https://atts.w3cschool.cn/attachments/image/20191225/1577243564858376.png)

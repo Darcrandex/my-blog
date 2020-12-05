@@ -1,7 +1,8 @@
 # mobx-hooks
 
-> 2020-4-22
-> 参考链接[React Context](https://mobx-react.js.org/recipes-context)
+> 参考链接
+>
+> - [React Context](https://mobx-react.js.org/recipes-context)
 
 这里写一个简单的例子
 

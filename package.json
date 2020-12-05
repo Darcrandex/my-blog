@@ -5,7 +5,7 @@
   "author": "darcrand",
   "license": "MIT",
   "scripts": {
-    "start": "yarn docs:dev --temp .temp",
+    "dev": "yarn docs:dev --temp .temp",
     "test": "sh bin/test.sh",
     "build": "sh bin/deploy.sh",
     "docs:dev": "vuepress dev docs",

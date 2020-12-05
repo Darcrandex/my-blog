@@ -24,12 +24,16 @@ const sidebar = setDefaultOptions([
 ]);
 
 module.exports = {
+  // 开发相关
+  host: "localhost",
+  port: 7788,
+
   // 顶部标题
   title: "Darcrand's Blog",
 
   themeConfig: {
     // 顶部导航
-    nav: [{ text: "Github", link: "https://github.com/Darcrandex" }],
+    nav: [{ text: "Github", link: "https://github.com/Darcrandex/my-blog" }],
 
     // 侧边栏
     sidebarDepth: 2,
