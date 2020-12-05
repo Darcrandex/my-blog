@@ -28,6 +28,7 @@ module.exports = {
   host: "localhost",
   port: 7788,
 
+  head: [["link", { rel: "icon", href: "/darcrand-avatar.jpg" }]],
   // 顶部标题
   title: "Darcrand's Blog",
 
