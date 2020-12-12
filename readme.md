@@ -32,4 +32,4 @@
 yarn build
 ```
 
-浏览器打开`https://darcrandex.github.io/`.
+浏览器打开[https://darcrandex.github.io](https://darcrandex.github.io)
