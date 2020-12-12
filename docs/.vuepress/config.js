@@ -28,12 +28,12 @@ module.exports = {
   host: "localhost",
   port: 7788,
 
-  head: [["link", { rel: "icon", href: "/darcrand-avatar.jpg" }]],
+  head: [["link", { rel: "icon", href: "/images/darcrand-avatar.jpg" }]],
   // 顶部标题
   title: "Darcrand's Blog",
 
   themeConfig: {
-    logo: "/darcrand-avatar.jpg",
+    logo: "/images/darcrand-avatar.jpg",
 
     // 顶部导航
     nav: [{ text: "Github", link: "https://github.com/Darcrandex/my-blog" }],
