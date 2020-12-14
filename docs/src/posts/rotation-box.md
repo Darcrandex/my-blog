@@ -6,6 +6,13 @@
 
 提供一个类,可以将容器内部的内容进行 3D 旋转.
 
+## 在 codepen 中预览
+
+<iframe height="265" style="width: 100%;height:500px;" scrolling="no" title="RotationMatrix" src="https://codepen.io/darcrand/embed/QWKGXpv?height=265&theme-id=light&default-tab=js,result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href='https://codepen.io/darcrand/pen/QWKGXpv'>RotationMatrix</a> by darcrand
+  (<a href='https://codepen.io/darcrand'>@darcrand</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
+
 ## 源码部分
 
 ```js
@@ -193,10 +200,3 @@ function rotate3d(baseMatrix, xDeg = 0, yDeg = 0, zDeg = 0) {
   return matrix;
 }
 ```
-
-## 在 codepen 中预览
-
-<iframe height="265" style="width: 100%;height:500px;" scrolling="no" title="RotationMatrix" src="https://codepen.io/darcrand/embed/QWKGXpv?height=265&theme-id=light&default-tab=js,result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
-  See the Pen <a href='https://codepen.io/darcrand/pen/QWKGXpv'>RotationMatrix</a> by darcrand
-  (<a href='https://codepen.io/darcrand'>@darcrand</a>) on <a href='https://codepen.io'>CodePen</a>.
-</iframe>
