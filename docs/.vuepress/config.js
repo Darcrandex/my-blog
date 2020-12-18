@@ -44,4 +44,6 @@ module.exports = {
 
     lastUpdated: true,
   },
+
+  plugins: ["@vuepress/back-to-top"],
 };
