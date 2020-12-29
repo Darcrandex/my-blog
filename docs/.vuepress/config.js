@@ -24,6 +24,9 @@ const sidebar = setDefaultOptions([
 ]);
 
 module.exports = {
+  // 博客部署的项目
+  base: "/my-blog/",
+
   // 开发相关
   host: "localhost",
   port: 7788,

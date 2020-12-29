@@ -26,10 +26,12 @@
 
 ## 部署
 
-执行部署脚本(具体内容查看`bin`文件夹中的`.sh`文件)
+> [vuepress 部署到 github page](https://vuepress.vuejs.org/zh/guide/deploy.html#github-pages)
+>
+> 执行部署脚本(具体内容查看`bin`文件夹中的`.sh`文件)
 
 ```
 yarn build
 ```
 
-浏览器打开[https://darcrandex.github.io](https://darcrandex.github.io)
+浏览器打开[https://darcrandex.github.io/my-blog](https://darcrandex.github.io/my-blog)
