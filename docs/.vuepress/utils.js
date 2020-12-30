@@ -38,14 +38,14 @@ function srcFilesToSidebar(rootDir = SRC_DIR) {
       //  第一层文件/文件夹的绝对路径
       const topLevelFilePath = path.join(rootDir, topLevelFileName);
       // 第一层的文件对象
-      const topLevleStat = fs.statSync(topLevelFilePath);
-      const isMarkDown = isMarkDownFile(topLevleStat, topLevelFileName);
+      const topLevelStat = fs.statSync(topLevelFilePath);
+      const isMarkDown = isMarkDownFile(topLevelStat, topLevelFileName);
 
       if (isMarkDown) {
         res.push(
           `/${SRC_DIR_NAME}/${urlencode(getMarkDownFileName(topLevelFileName))}`
         );
-      } else if (topLevleStat.isDirectory()) {
+      } else if (topLevelStat.isDirectory()) {
         const children = [];
 
         // 嵌套的子层(目前只支持两层结构)
@@ -70,9 +70,8 @@ function srcFilesToSidebar(rootDir = SRC_DIR) {
       }
     });
   } catch (err) {
-    console.error("自动生成失败", err);
+    console.error("自动生成 侧边栏配置 失败", err);
     throw err;
-    // return [];
   }
 
   return res;
