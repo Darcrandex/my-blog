@@ -74,7 +74,9 @@ export default function withSearchListener(listenOnDidMount = true) {
       class extends WrappedComponent {
         componentDidMount() {
           // 初始化默认的search
-          initSearch = this.state.search || {};
+          if (this.state && typeof this.state.search === "object") {
+            initSearch = this.state.search;
+          }
 
           if (
             typeof WrappedComponent.prototype.componentDidMount === "function"
