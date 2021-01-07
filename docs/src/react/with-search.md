@@ -143,11 +143,22 @@ import withSearchListener, { objectToSearch } from "@/utils/search-listener";
 @withSearchListener()
 class App extends Component {
   state = { search: { a: "", b: "" } };
+
   componentDidMount() {
     console.log(this.state.search);
   }
+
   onRouteSearchUpdate(search = {}, location = {}) {
     console.log(this.state.search);
+  }
+
+  gotoSameRouteWithOhterSearch() {
+    const { pathname } = this.props.location;
+    const nextSearch = objectToSearch({ c: "888" });
+    this.props.history.replace(pathname + nextSearch);
+
+    // 这里的路由跳转后会自动刷新当前组件的'state'
+    // 将得到state: { search: { a: "", b: "", c: "888" }  }
   }
 
   render() {
