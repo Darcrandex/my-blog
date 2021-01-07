@@ -1,4 +1,4 @@
-# mobx@7.x hooks
+# mobx-react@7.x hooks
 
 > 参考文章
 >
@@ -8,13 +8,13 @@
 
 ## 前言
 
-`mobx@7.x`相较于`mbox@6.x`有很大改变, api 也有所不同. 因此写法有改变. 另外本例子是基于`react@17.0.1`+`react hooks`+`mobx@7.x + typescript`创建的.
+`mobx-react@7.x`相较于`mobx-react@6.x`有很大改变, api 也有所不同. 因此写法有改变. 另外本例子是基于`react@17.0.1`+`react hooks`+`mobx@6.x` + `mobx-react@7.x`+ `typescript`创建的.
 
 ## 如何定义子模块
 
 > 因为使用`mobx`, 大多都是用来做全局状态管理的. 因此会拆分多个子模块.
 
-`mobx@7.x`提供了[makeAutoObservable](https://mobx.js.org/observable-state.html#makeautoobservable)方法, 用来将普通对象转化为可观察对象.
+`mobx-react@7.x`提供了[makeAutoObservable](https://mobx.js.org/observable-state.html#makeautoobservable)方法, 用来将普通对象转化为可观察对象.
 官方文档的例子中是在`constructor`中进行转化的.
 
 ```js {6}
@@ -44,7 +44,7 @@ class Timer {
 const timer = makeAutoObservable(new Timer());
 ```
 
-另外, 例子中的子模块类的`属性`和`方法`并没有使用`装饰器`(mobx@6.x 提供的), 也可以正常运行. 但是会存在引用方法时, `this`指向错误的问题.
+另外, 例子中的子模块类的`属性`和`方法`并没有使用`装饰器`, 也可以正常运行. 但是会存在引用方法时, `this`指向错误的问题.
 
 ```jsx
 <button onClick={timer.increaseTimer}>increaseTimer</button>
@@ -70,7 +70,7 @@ const timer = makeAutoObservable(new Timer());
 
 ## 定义 stroe 总模块
 
-`mobx@7.x`中, 推荐使用`React Context`来存储状态. [Using external state in observer components](https://mobx.js.org/react-integration.html#using-external-state-in-observer-components)
+`mobx-react@7.x`中, 推荐使用`React Context`来存储状态. [Using external state in observer components](https://mobx.js.org/react-integration.html#using-external-state-in-observer-components)
 
 先来看总览的代码
 
