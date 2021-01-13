@@ -26,8 +26,8 @@ function backCycle(num: number, cycle: number): number {
  * @param {Number} min 最小边界值
  * @param {Number} max 最大边界值
  */
-function boundary(num: number, min: number, max: number): number {
-  return num < min ? min : num > max ? max : num;
+function boundary(num, min = -Infinity, max = Infinity) {
+  return Math.max(min, Math.min(max, num));
 }
 ```
 
@@ -138,27 +138,17 @@ function hsla2rgba(h = 0, s = 1, l = 0.5, a = 1) {
 ## 随机字符串
 
 ```ts
-function randomStr(len: number = 16, startWithLetter: boolean = true): string {
-  if (len < 1) {
-    return "";
-  }
-
-  const chars =
-    "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-  const letterChars = chars.slice(10);
-
-  const getChar = (chars = "") => {
-    return chars[Math.floor(Math.random() * chars.length)];
-  };
-
+function randomStr(len = 16) {
+  const l = Math.max(1, Math.min(100, len));
   let str = "";
-  for (let i = 1; i < len; i++) {
-    str += getChar(chars);
+
+  while (str.length < l) {
+    str += Math.random()
+      .toString(36)
+      .slice(2);
   }
 
-  str = getChar(startWithLetter ? letterChars : chars) + str;
-
-  return str;
+  return str.slice(0, l);
 }
 ```
 
