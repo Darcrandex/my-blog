@@ -21,14 +21,14 @@
 4. antd@4, 按需加载 + 自定义样式 + 全局 less 变量
 5. 集成`axios`
 
-### 根据官方教程创建项目
+## 根据官方教程创建项目
 
 ```sh
 yarn create @vitejs/app vite-app --template react
 cd vite-app
 ```
 
-### 引入 react-router
+## 引入 react-router
 
 ```sh
 yarn add react-router-dom
@@ -54,7 +54,7 @@ import { BrowserRouter } from "react-router-dom";
 </BrowserRouter>;
 ```
 
-### 引入 mobx@6
+## 引入 mobx@6
 
 ```sh
 yarn add mobx@6 mobx-react@7
@@ -62,7 +62,7 @@ yarn add mobx@6 mobx-react@7
 
 > 关于 `mobx 6.x`的用法, 具体参考[mobx-react@7.x hooks](https://darcrandex.github.io/my-blog/src/posts/mobx-hooks.html)
 
-### 引入 less 和 antd
+## 引入 less 和 antd
 
 ```sh
 yarn add antd
@@ -99,7 +99,7 @@ export default {
 };
 ```
 
-### 引入 axios 并配置开发代理
+## 引入 axios 并配置开发代理
 
 ```sh
 yarn add axios
