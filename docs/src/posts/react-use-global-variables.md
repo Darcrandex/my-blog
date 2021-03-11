@@ -116,4 +116,4 @@ interface Window {
 ```
 
 这样就可以在写代码时获得提示:
-<img :src="$withBase('/images/react-use-global-variables-001.png')" alt="dock">
+<img :src="$withBase('/images/react-use-global-variables-001.jpg')" alt="dock">

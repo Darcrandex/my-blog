@@ -13,6 +13,7 @@
   },
   "devDependencies": {
     "@vuepress/plugin-back-to-top": "^1.7.1",
+    "directory-tree": "^2.2.7",
     "vuepress": "^1.7.1"
   },
   "dependencies": {

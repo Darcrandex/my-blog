@@ -1,10 +1,10 @@
-const srcFilesToSidebar = require("./utils");
+const autoGetSidebarOptionBySrcDir = require("./get-sidebar-by-dir");
 
 // 统一配置一些选项
 function setDefaultOptions(sidebar = []) {
   return sidebar.map((item) => {
-    // 让侧边导航无法折叠
     if (typeof item === "object") {
+      // 让侧边导航无法折叠
       return Object.assign(item, { collapsable: false });
     } else {
       return item;
@@ -14,13 +14,10 @@ function setDefaultOptions(sidebar = []) {
 
 // 配置侧边栏
 const sidebar = setDefaultOptions([
-  {
-    title: "介绍",
-    path: "/", // 这个路径获取默认获取'docs/readme.md',而且是必须的
-  },
+  "/", // 这个路径获取默认获取'docs/readme.md',而且是必须的
 
   // 根据src文件夹生成的导航
-  ...srcFilesToSidebar(),
+  ...autoGetSidebarOptionBySrcDir(),
 ]);
 
 module.exports = {
@@ -42,7 +39,6 @@ module.exports = {
     nav: [{ text: "Github", link: "https://github.com/Darcrandex/my-blog" }],
 
     // 侧边栏
-    sidebarDepth: 2,
     sidebar,
 
     lastUpdated: true,
