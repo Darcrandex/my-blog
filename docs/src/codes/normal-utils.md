@@ -140,7 +140,7 @@ function hsla2rgba(h = 0, s = 1, l = 0.5, a = 1) {
 ```ts
 function randomStr(len = 16) {
   const l = Math.max(1, Math.min(100, len));
-  let str = "";
+  let str = "_";
 
   while (str.length < l) {
     str += Math.random()
@@ -495,4 +495,19 @@ window.location.href += search;
 
 ```js
 const objectFromSearch = URLQuery.toObject();
+```
+
+## 限制数值大小
+
+```js
+/**
+ * @description 限制数值大小
+ * @param {number} num 目标数值
+ * @param {number?} min 最小值
+ * @param {number?} max 最大值
+ * @returns
+ */
+function limit(num = 0, { min = -Infinity, max = Infinity } = {}) {
+  return Math.min(max, Math.max(min, num));
+}
 ```
