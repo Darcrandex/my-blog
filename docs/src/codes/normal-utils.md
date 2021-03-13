@@ -73,24 +73,28 @@ function objectToSearch(obj: object): string {
 
 ## 小数点保留
 
-```ts
-interface INumberFixed {
-  (
-    num: number,
-    options?: { count?: number; type?: "round" | "floor" | "ceil" }
-  ): number;
-}
+```js
+function toFixed(num = 0, count = 2) {
+  if (typeof num !== "number") {
+    throw new Error("argument 'num' must be a Number");
+  }
+  if (typeof count !== "number") {
+    throw new Error("argument 'count' must be a Number");
+  }
 
-const numberFixed: INumberFixed = (num = 0, { count = 2, type = "round" }) => {
-  const power = Math.pow(10, count);
-  return Math[type](num * power) / power;
-};
+  const _c = Math.max(1, Math.min(10, count));
+  return parseFloat(num.toFixed(_c));
+}
 ```
 
 使用
 
-```ts
-numberFixed(12, { count: 2, type: "round" });
+```js
+toFixed(0.1 + 0.2);
+toFixed(12 * 0.6);
+toFixed(0.3 + 0.6);
+toFixed(0.4 * 0.7);
+toFixed(0.9 * 0.2);
 ```
 
 ## 颜色转化 hsl to rgb
