@@ -38,6 +38,10 @@ Schema -> Model -> Entity
 
 ## 安装 MongoDB (windows)
 
+打开[mongoDB 下载地址](https://www.mongodb.com/try/download/community), 然后选择版本, 最后点击下载即可. 安装过程只需一路点击`下一步`.
+
+[MongoDB 可视化管理工具](https://www.mongodb.com/try/download/compass)
+
 ## 在 koa 中使用
 
 使用[Mongoose](https://www.npmjs.com/package/mongoose)可以让我们中`nodejs`服务中连接并操作`MongoDB`数据库.
