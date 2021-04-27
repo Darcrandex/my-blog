@@ -9,9 +9,9 @@ import $ from "jquery";
 
 /**
  * @desc 滚动到指定元素
- * @param {string} targetElementId 目标元素的id
- * @param {string?} containerId 容器id, 不传默认使用body
- * @param {number?} offsetTop 滚动位置偏移(滚动后,距离窗口顶部的距离)
+ * @prop {string} targetElementId 目标元素的id
+ * @prop {string?} containerId 容器id, 不传默认使用body
+ * @prop {number?} offsetTop 滚动位置偏移(滚动后,距离窗口顶部的距离)
  */
 function scrollToElement({ targetElementId, containerId, offsetTop = 0 } = {}) {
   try {
