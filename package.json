@@ -6,10 +6,9 @@
   "license": "MIT",
   "scripts": {
     "dev": "yarn docs:dev --temp .temp",
-    "test": "sh bin/test.sh",
-    "build": "sh bin/deploy.sh",
-    "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs"
+    "build": "vuepress build docs",
+    "deploy": "sh bin/deploy.sh",
+    "docs:dev": "vuepress dev docs"
   },
   "devDependencies": {
     "@vuepress/plugin-back-to-top": "^1.7.1",
