@@ -1,7 +1,7 @@
 # 打包并发布到github-page
 
 # 打包
-npm run docs:build
+npm run build
 
 # 进入打包目录
 cd docs/.vuepress/dist
