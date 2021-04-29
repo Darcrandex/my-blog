@@ -54,7 +54,7 @@ npm i @babel/runtime --save
 touch rollup-build.js
 ```
 
-```js{16}
+```js {16}
 // /rollup-build.js
 
 const fs = require("fs");
@@ -199,7 +199,7 @@ npm i pkg -D
 
 最后, 把打出来的包文件(`wiris-node12-linux`)上传到服务器. 启动的命令是:
 
-```
+```sh
 cd your-project-dir
 ./wiris-node12-linux start
 ```
