@@ -44,8 +44,5 @@ module.exports = {
     lastUpdated: true,
   },
 
-  plugins: [
-    "@vuepress/back-to-top",
-    ["vuepress-plugin-code-copy", { align: "top" }],
-  ],
+  plugins: ["@vuepress/back-to-top"],
 };
